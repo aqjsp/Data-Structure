@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="300" rx="12" fill="#fafafa"/>
+  <rect width="900" height="300" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">快排 vs 归并：原地 vs 稳定</text>
+
+  <rect x="40" y="58" width="400" height="200" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="240" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">快速排序</text>
+  <text x="240" y="122" text-anchor="middle" font-size="12" fill="#0d47a1">选 pivot，小的左、大的右</text>
+  <text x="240" y="146" text-anchor="middle" font-size="12" fill="#0d47a1">平均 O(n log n)，最坏 O(n²)</text>
+  <text x="240" y="170" text-anchor="middle" font-size="12" fill="#0d47a1">原地、不稳定</text>
+  <text x="240" y="202" text-anchor="middle" font-size="12" fill="#c62828">已有序 + 固定取端点 = 最坏</text>
+  <text x="240" y="226" text-anchor="middle" font-size="11" fill="#546e7a">工程：随机 pivot / 三数取中 / 小数组插排</text>
+
+  <rect x="460" y="58" width="400" height="200" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="660" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">归并排序</text>
+  <text x="660" y="122" text-anchor="middle" font-size="12" fill="#1b5e20">对半切，有序合并</text>
+  <text x="660" y="146" text-anchor="middle" font-size="12" fill="#1b5e20">始终 O(n log n)</text>
+  <text x="660" y="170" text-anchor="middle" font-size="12" fill="#1b5e20">稳定，要 O(n) 额外空间</text>
+  <text x="660" y="202" text-anchor="middle" font-size="12" fill="#2e7d32">外排序、链表排序首选</text>
+  <text x="660" y="226" text-anchor="middle" font-size="11" fill="#546e7a">面试手写：先写 merge，再写递归</text>
+  <text x="450" y="280" text-anchor="middle" font-size="12" fill="#78909c">堆排序也是 O(n log n) 原地不稳定。稳定且 O(n log n) 只有归并（比较排序下）</text>
+
+</svg>

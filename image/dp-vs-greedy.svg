@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="280" rx="12" fill="#fafafa"/>
+  <rect width="900" height="280" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">贪心 / 分治 / DP / 回溯：决策方式</text>
+
+  <rect x="20" y="58" width="200" height="180" rx="10" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="120" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">贪心</text>
+  <text x="120" y="122" text-anchor="middle" font-size="12" fill="#0d47a1">每步局部最优</text>
+  <text x="120" y="146" text-anchor="middle" font-size="12" fill="#0d47a1">不回退</text>
+  <text x="120" y="178" text-anchor="middle" font-size="11" fill="#546e7a">要证明贪心选择性质</text>
+  <text x="120" y="202" text-anchor="middle" font-size="11" fill="#546e7a">活动选择、Huffman</text>
+
+  <rect x="240" y="58" width="200" height="180" rx="10" fill="#fff3e0" stroke="#e65100"/>
+  <text x="340" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">分治</text>
+  <text x="340" y="122" text-anchor="middle" font-size="12" fill="#bf360c">子问题独立</text>
+  <text x="340" y="146" text-anchor="middle" font-size="12" fill="#bf360c">合并得解</text>
+  <text x="340" y="178" text-anchor="middle" font-size="11" fill="#546e7a">归并、快排、最近点对</text>
+  <text x="340" y="202" text-anchor="middle" font-size="11" fill="#546e7a">重叠就浪费</text>
+
+  <rect x="460" y="58" width="200" height="180" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="560" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">动态规划</text>
+  <text x="560" y="122" text-anchor="middle" font-size="12" fill="#1b5e20">子问题重叠</text>
+  <text x="560" y="146" text-anchor="middle" font-size="12" fill="#1b5e20">最优子结构</text>
+  <text x="560" y="178" text-anchor="middle" font-size="11" fill="#546e7a">先状态、再转移、再边界</text>
+  <text x="560" y="202" text-anchor="middle" font-size="11" fill="#546e7a">背包、LCS、编辑距离</text>
+
+  <rect x="680" y="58" width="200" height="180" rx="10" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="780" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#6a1b9a">回溯</text>
+  <text x="780" y="122" text-anchor="middle" font-size="12" fill="#4a148c">枚举 + 撤销</text>
+  <text x="780" y="146" text-anchor="middle" font-size="12" fill="#4a148c">剪枝</text>
+  <text x="780" y="178" text-anchor="middle" font-size="11" fill="#546e7a">排列组合、N 皇后</text>
+  <text x="780" y="202" text-anchor="middle" font-size="11" fill="#546e7a">分支限界用队列/优先队列</text>
+  <text x="450" y="262" text-anchor="middle" font-size="12" fill="#78909c">能贪心就别 DP；子问题独立用分治；要最优且重叠用 DP；要全部方案用回溯</text>
+
+</svg>

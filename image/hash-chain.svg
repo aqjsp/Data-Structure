@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 280" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="860" height="280" rx="12" fill="#fafafa"/>
+  <rect width="860" height="280" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">哈希冲突：链地址 vs 开放寻址</text>
+
+  <rect x="40" y="60" width="360" height="180" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="220" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">链地址（Java HashMap）</text>
+  <text x="220" y="122" text-anchor="middle" font-size="12" fill="#0d47a1">桶数组 + 链表/红黑树</text>
+  <text x="220" y="146" text-anchor="middle" font-size="12" fill="#0d47a1">冲突挂到同一桶</text>
+  <text x="220" y="178" text-anchor="middle" font-size="12" fill="#1565c0">装载因子 0.75 扩容</text>
+  <text x="220" y="202" text-anchor="middle" font-size="11" fill="#546e7a">删除简单，缓存局部性差</text>
+
+  <rect x="460" y="60" width="360" height="180" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="640" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">开放寻址（Python dict）</text>
+  <text x="640" y="122" text-anchor="middle" font-size="12" fill="#bf360c">冲突就探下一个空槽</text>
+  <text x="640" y="146" text-anchor="middle" font-size="12" fill="#bf360c">线性 / 二次 / 双重哈希</text>
+  <text x="640" y="178" text-anchor="middle" font-size="12" fill="#e65100">删除要放 tombstone</text>
+  <text x="640" y="202" text-anchor="middle" font-size="11" fill="#546e7a">连续内存，探查成本受装载影响</text>
+  <text x="430" y="264" text-anchor="middle" font-size="12" fill="#78909c">哈希查找平均 O(1) 的前提是均匀 + 装载因子受控。最坏仍 O(n)</text>
+
+</svg>

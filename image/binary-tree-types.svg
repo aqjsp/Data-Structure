@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="300" rx="12" fill="#fafafa"/>
+  <rect width="900" height="300" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">满 / 完全 / BST / 平衡：别混</text>
+
+  <rect x="20" y="58" width="200" height="200" rx="10" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="120" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">满二叉树</text>
+  <text x="120" y="120" text-anchor="middle" font-size="12" fill="#0d47a1">每层都满</text>
+  <text x="120" y="144" text-anchor="middle" font-size="12" fill="#0d47a1">节点数 = 2^h - 1</text>
+  <text x="120" y="176" text-anchor="middle" font-size="11" fill="#546e7a">最严</text>
+
+  <rect x="240" y="58" width="200" height="200" rx="10" fill="#fff3e0" stroke="#e65100"/>
+  <text x="340" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">完全二叉树</text>
+  <text x="340" y="120" text-anchor="middle" font-size="12" fill="#bf360c">最后一层左对齐</text>
+  <text x="340" y="144" text-anchor="middle" font-size="12" fill="#bf360c">堆用数组存就是它</text>
+  <text x="340" y="176" text-anchor="middle" font-size="11" fill="#546e7a">下标：左 2i 右 2i+1（从 1）</text>
+  <text x="340" y="200" text-anchor="middle" font-size="11" fill="#546e7a">从 0：左 2i+1 右 2i+2</text>
+
+  <rect x="460" y="58" width="200" height="200" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="560" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">二叉搜索树</text>
+  <text x="560" y="120" text-anchor="middle" font-size="12" fill="#1b5e20">左 &lt; 根 &lt; 右</text>
+  <text x="560" y="144" text-anchor="middle" font-size="12" fill="#1b5e20">中序即有序</text>
+  <text x="560" y="176" text-anchor="middle" font-size="11" fill="#546e7a">退化成链就是 O(n)</text>
+
+  <rect x="680" y="58" width="200" height="200" rx="10" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="780" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#6a1b9a">AVL / 红黑</text>
+  <text x="780" y="120" text-anchor="middle" font-size="12" fill="#4a148c">旋转维持平衡</text>
+  <text x="780" y="144" text-anchor="middle" font-size="12" fill="#4a148c">查找 O(log n)</text>
+  <text x="780" y="176" text-anchor="middle" font-size="11" fill="#546e7a">map/set 常用红黑树</text>
+  <text x="450" y="280" text-anchor="middle" font-size="12" fill="#78909c">完全二叉树 ⊂ 不满也可以；满一定完全。堆是完全二叉树 + 堆序，不是 BST</text>
+
+</svg>

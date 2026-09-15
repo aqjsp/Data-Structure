@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="880" height="260" rx="12" fill="#fafafa"/>
+  <rect width="880" height="260" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">二分查找：循环不变量</text>
+
+  <rect x="40" y="70" width="800" height="50" rx="6" fill="#fff" stroke="#90a4ae"/>
+  <rect x="40" y="70" width="160" height="50" fill="#cfd8dc"/>
+  <rect x="200" y="70" width="400" height="50" fill="#bbdefb"/>
+  <rect x="600" y="70" width="240" height="50" fill="#cfd8dc"/>
+  <text x="120" y="100" text-anchor="middle" font-size="12" fill="#37474f">已排除</text>
+  <text x="400" y="100" text-anchor="middle" font-size="13" fill="#0d47a1">[left, right] 仍可能含目标</text>
+  <text x="720" y="100" text-anchor="middle" font-size="12" fill="#37474f">已排除</text>
+  <text x="440" y="160" text-anchor="middle" font-size="13" fill="#37474f">mid = left + (right-left)/2　防溢出</text>
+  <text x="440" y="188" text-anchor="middle" font-size="13" fill="#37474f">nums[mid] &lt; target → left = mid+1；nums[mid] &gt; target → right = mid-1</text>
+  <text x="440" y="216" text-anchor="middle" font-size="12" fill="#c62828">开闭区间一旦混用就会死循环或漏边界。先写清不变式再写代码</text>
+  <text x="440" y="244" text-anchor="middle" font-size="12" fill="#78909c">插值查找按比例跳，均匀分布才比二分快；斐波那契查找是分割点换成斐波那契数</text>
+
+</svg>
