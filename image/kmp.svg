@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="system-ui, -apple-system, sans-serif, monospace">
+  <rect width="900" height="300" rx="12" fill="#fafafa"/>
+  <rect width="900" height="300" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">暴力回退 vs KMP 利用已匹配前缀跳过</text>
+
+  <rect x="40" y="58" width="400" height="210" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="240" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">暴力：主串指针 i 回退</text>
+  <g font-family="monospace" font-size="14">
+    <text x="70" y="120" fill="#37474f">s: a a a a a b</text>
+    <text x="70" y="145" fill="#c62828">p: a a a b</text>
+    <text x="70" y="170" fill="#546e7a" font-size="12">失配 → p 右移一位，i 退回从头再比</text>
+    <text x="70" y="190" fill="#c62828">p:   a a a b</text>
+  </g>
+  <text x="240" y="230" text-anchor="middle" font-size="12" fill="#b71c1c">已比对信息全丢弃，最坏 O(n·m)</text>
+  <text x="240" y="252" text-anchor="middle" font-size="11" fill="#546e7a">浪费的本质：主串 i 发生回退</text>
+
+  <rect x="460" y="58" width="400" height="210" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="660" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">KMP：i 永不回退，只动 j</text>
+  <g font-family="monospace" font-size="14">
+    <text x="490" y="120" fill="#37474f">p = a b a b c</text>
+    <text x="490" y="145" fill="#2e7d32">next = 0 0 1 2 0</text>
+    <text x="490" y="172" fill="#546e7a" font-size="12">失配时 j = next[j-1]，跳过</text>
+    <text x="490" y="190" fill="#546e7a" font-size="12">已匹配前缀的最长相同前后缀</text>
+  </g>
+  <text x="660" y="230" text-anchor="middle" font-size="12" fill="#1b5e20">跳过的部分保证匹配，O(n+m)</text>
+  <text x="660" y="252" text-anchor="middle" font-size="11" fill="#546e7a">next 就是「模式串和自己做 KMP」</text>
+
+  <text x="450" y="288" text-anchor="middle" font-size="12" fill="#78909c">工程搜索常用 Boyer-Moore（从尾比，跳更远）；多模式用 Trie + AC 自动机</text>
+</svg>

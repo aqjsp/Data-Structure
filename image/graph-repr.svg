@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="320" rx="12" fill="#fafafa"/>
+  <rect width="900" height="320" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">邻接矩阵 vs 邻接表：稠密图与稀疏图的两种存法</text>
+
+  <text x="230" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#37474f">图：0→1, 0→2, 1→2, 2→3</text>
+  <circle cx="130" cy="120" r="20" fill="#c5cae9" stroke="#283593" stroke-width="2"/><text x="130" y="125" text-anchor="middle" font-size="13" fill="#1a237e">0</text>
+  <circle cx="260" cy="110" r="20" fill="#c5cae9" stroke="#283593" stroke-width="2"/><text x="260" y="115" text-anchor="middle" font-size="13" fill="#1a237e">1</text>
+  <circle cx="200" cy="200" r="20" fill="#c5cae9" stroke="#283593" stroke-width="2"/><text x="200" y="205" text-anchor="middle" font-size="13" fill="#1a237e">2</text>
+  <circle cx="330" cy="195" r="20" fill="#c5cae9" stroke="#283593" stroke-width="2"/><text x="330" y="200" text-anchor="middle" font-size="13" fill="#1a237e">3</text>
+  <line x1="149" y1="114" x2="241" y2="112" stroke="#283593" marker-end="url(#d)"/>
+  <line x1="144" y1="135" x2="188" y2="184" stroke="#283593" marker-end="url(#d)"/>
+  <line x1="253" y1="128" x2="212" y2="182" stroke="#283593" marker-end="url(#d)"/>
+  <line x1="219" y1="196" x2="311" y2="195" stroke="#283593" marker-end="url(#d)"/>
+
+  <text x="480" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">邻接矩阵 O(n²)</text>
+  <g font-size="11" fill="#0d47a1">
+    <text x="430" y="95">  0 1 2 3</text>
+    <text x="415" y="115">0 0 1 1 0</text>
+    <text x="415" y="133">1 0 0 1 0</text>
+    <text x="415" y="151">2 0 0 0 1</text>
+    <text x="415" y="169">3 0 0 0 0</text>
+  </g>
+  <text x="480" y="195" text-anchor="middle" font-size="11" fill="#37474f">查 i-j 相邻 O(1)，空间恒 O(n²)</text>
+
+  <text x="720" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">邻接表 O(V+E)</text>
+  <g font-size="12" fill="#1b5e20">
+    <text x="620" y="98">0 → [1, 2]</text>
+    <text x="620" y="120">1 → [2]</text>
+    <text x="620" y="142">2 → [3]</text>
+    <text x="620" y="164">3 → []</text>
+  </g>
+  <text x="720" y="195" text-anchor="middle" font-size="11" fill="#37474f">遍历邻居自然，现实稀疏图默认选它</text>
+
+  <text x="450" y="248" text-anchor="middle" font-size="12" fill="#455a64">遍历：BFS 用队列（无权最短路）　DFS 用栈/递归（连通、找环、拓扑排序）</text>
+  <text x="450" y="272" text-anchor="middle" font-size="12" fill="#455a64">最短路：无权 BFS｜非负权 Dijkstra｜负权 Bellman-Ford｜全对全 Floyd</text>
+  <defs><marker id="d" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#283593"/></marker></defs>
+  <text x="450" y="302" text-anchor="middle" font-size="12" fill="#78909c">连通性用并查集；最小生成树用 Kruskal（并查集）或 Prim（优先队列）</text>
+</svg>

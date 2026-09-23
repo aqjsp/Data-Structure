@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="320" rx="12" fill="#fafafa"/>
+  <rect width="900" height="320" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">哈希：键经函数落到桶，冲突时拉链或开放寻址</text>
+
+  <text x="120" y="80" text-anchor="middle" font-size="13" fill="#37474f">key</text>
+  <rect x="70" y="90" width="100" height="34" rx="6" fill="#e1bee7" stroke="#6a1b9a"/>
+  <text x="120" y="112" text-anchor="middle" font-size="12" fill="#4a148c">"apple"</text>
+  <line x1="170" y1="107" x2="250" y2="107" stroke="#6a1b9a" stroke-width="2" marker-end="url(#c)"/>
+  <rect x="250" y="90" width="150" height="34" rx="6" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="325" y="112" text-anchor="middle" font-size="11" fill="#4a148c">hash & (n-1)</text>
+  <line x1="400" y1="107" x2="470" y2="107" stroke="#6a1b9a" stroke-width="2" marker-end="url(#c)"/>
+  <text x="500" y="112" font-size="12" fill="#4a148c">桶下标 5</text>
+
+  <text x="180" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">拉链法</text>
+  <g>
+    <rect x="70" y="180" width="34" height="30" fill="#ffcdd2" stroke="#c62828"/>
+    <rect x="70" y="210" width="34" height="30" fill="#ffcdd2" stroke="#c62828"/>
+    <rect x="70" y="240" width="34" height="30" fill="#ef9a9a" stroke="#c62828"/>
+    <rect x="70" y="270" width="34" height="30" fill="#ffcdd2" stroke="#c62828"/>
+    <rect x="130" y="245" width="70" height="26" fill="#fff" stroke="#c62828"/>
+    <rect x="220" y="245" width="70" height="26" fill="#fff" stroke="#c62828"/>
+    <line x1="104" y1="255" x2="130" y2="258" stroke="#c62828" marker-end="url(#c)"/>
+    <line x1="200" y1="258" x2="220" y2="258" stroke="#c62828" marker-end="url(#c)"/>
+  </g>
+  <text x="330" y="262" font-size="11" fill="#37474f">同桶挂链；Java8 链长≥8 且桶≥64 转红黑树</text>
+
+  <text x="640" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">开放寻址</text>
+  <g>
+    <rect x="500" y="180" width="40" height="30" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="540" y="180" width="40" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+    <rect x="580" y="180" width="40" height="30" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="620" y="180" width="40" height="30" fill="#90caf9" stroke="#1565c0"/>
+    <rect x="660" y="180" width="40" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  </g>
+  <line x1="600" y1="215" x2="640" y2="215" stroke="#c62828" stroke-width="2" marker-end="url(#c)"/>
+  <text x="600" y="234" text-anchor="middle" font-size="11" fill="#37474f">冲突就往后探测找空位</text>
+  <text x="600" y="256" text-anchor="middle" font-size="11" fill="#37474f">cache 友好，对负载因子敏感，删除要墓碑</text>
+
+  <defs><marker id="c" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6a1b9a"/></marker></defs>
+  <text x="450" y="308" text-anchor="middle" font-size="12" fill="#78909c">负载因子超 0.75 扩容 + rehash；equals 与 hashCode 必须一起重写</text>
+</svg>

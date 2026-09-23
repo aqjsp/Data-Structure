@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="300" rx="12" fill="#fafafa"/>
+  <rect width="900" height="300" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">数组连续、链表跳转：地址与 cache 的差别</text>
+
+  <rect x="40" y="58" width="400" height="200" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="240" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">数组：连续内存</text>
+  <g>
+    <rect x="70" y="104" width="50" height="40" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="120" y="104" width="50" height="40" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="170" y="104" width="50" height="40" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="220" y="104" width="50" height="40" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="270" y="104" width="50" height="40" fill="#bbdefb" stroke="#1565c0"/>
+    <rect x="320" y="104" width="50" height="40" fill="#bbdefb" stroke="#1565c0"/>
+  </g>
+  <text x="240" y="172" text-anchor="middle" font-size="12" fill="#0d47a1">地址 = 首地址 + i × size → 随机访问 O(1)</text>
+  <text x="240" y="196" text-anchor="middle" font-size="12" fill="#0d47a1">一条 cache line 顺带拉进十几个元素</text>
+  <text x="240" y="228" text-anchor="middle" font-size="12" fill="#c62828">中间插入/删除要挪后面：O(n)</text>
+
+  <rect x="460" y="58" width="400" height="200" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="660" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">链表：指针串联</text>
+  <g>
+    <rect x="490" y="110" width="46" height="34" fill="#ffe0b2" stroke="#e65100"/>
+    <rect x="590" y="110" width="46" height="34" fill="#ffe0b2" stroke="#e65100"/>
+    <rect x="700" y="110" width="46" height="34" fill="#ffe0b2" stroke="#e65100"/>
+    <line x1="536" y1="127" x2="590" y2="127" stroke="#e65100" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="636" y1="127" x2="700" y2="127" stroke="#e65100" stroke-width="2" marker-end="url(#a)"/>
+  </g>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#e65100"/></marker></defs>
+  <text x="660" y="172" text-anchor="middle" font-size="12" fill="#bf360c">第 i 个要逐跳 next：随机访问 O(n)</text>
+  <text x="660" y="196" text-anchor="middle" font-size="12" fill="#bf360c">节点散落堆各处，逐跳几乎次次 cache miss</text>
+  <text x="660" y="228" text-anchor="middle" font-size="12" fill="#2e7d32">已持有节点指针时增删 O(1)</text>
+
+  <text x="450" y="282" text-anchor="middle" font-size="12" fill="#78909c">默认用数组（vector）；链表只在「已知位置频繁增删、很少遍历」时才值</text>
+</svg>
